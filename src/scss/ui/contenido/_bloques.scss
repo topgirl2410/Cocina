@@ -23,7 +23,7 @@
     }
 
     &:nth-child(2) {
-        @include m.bgImage("../img/bloque_1.jpg");
+        @include m.bgImage("../img/bloque.png");
     }
  
     &:nth-child(3){
@@ -34,7 +34,7 @@
     }
 
     &:nth-child(4) {
-        @include m.bgImage("../img/bloque_2.jpg");
+        @include m.bgImage("../img/bloque1.jpg");
     }
 
     &__contenido {

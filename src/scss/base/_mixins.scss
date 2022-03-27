@@ -1,4 +1,4 @@
-@use 'variables' as v; 
+@use "variables" as v;
 
 /** Media Queries **/
 @mixin telefono {
@@ -22,7 +22,6 @@
     }
 }
 
-
 @mixin boton($bgColor, $colorTexto) {
     background-color: $bgColor;
     padding: 1.5rem 4rem;
@@ -34,27 +33,40 @@
     font-weight: 700;
     border: none;
     transition-property: background-color;
-    transition-duration: .3s;
+    transition-duration: 0.3s;
     text-align: center;
 
     @include tablet {
         width: auto;
     }
     &:hover {
-        background-color: darken( $bgColor, 10% );
+        background-color: darken($bgColor, 10%);
     }
 }
 
-@mixin grid($columnas, $espaciado ) {
+@mixin grid($columnas, $espaciado) {
     display: grid;
     gap: $espaciado;
     grid-template-columns: repeat($columnas, 1fr);
 }
 
-
-@mixin bgImage($url){
+@mixin bgImage($url) {
     background-image: url($url);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+@mixin heading {
+    text-align: center;
+
+    &::after {
+        content: '';
+        display: block;
+        height: 10rem;
+        margin: 0 auto;
+        background-image: url(../img/separador_alternativo.png);
         background-repeat: no-repeat;
-        background-size: cover;
         background-position: center center;
+    }
 }
